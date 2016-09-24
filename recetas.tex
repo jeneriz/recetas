@@ -1,0 +1,326 @@
+\documentclass[%
+a4paper,
+twoside,
+14pt
+]{book}
+
+% encoding, font, language
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{lmodern}
+\usepackage[spanish, english]{babel}
+
+\usepackage{nicefrac}
+
+\usepackage[
+    handwritten,
+    nowarnings,
+    %myconfig
+]
+{xcookybooky}
+
+\usepackage{blindtext}    % only needed for generating test text
+
+\DeclareRobustCommand{\textcelcius}{\ensuremath{^{\circ}\mathrm{C}}}
+
+
+\setcounter{secnumdepth}{1}
+\renewcommand*{\recipesection}[2][]
+{%
+    \subsection[#1]{#2}
+}
+\renewcommand{\subsectionmark}[1]
+{% no implementation to display the section name instead
+}
+
+
+\usepackage{hyperref}    % must be the last package
+\hypersetup{%
+    pdfauthor            = {Julio Eneriz},
+    pdftitle             = {Prueba de recetas},
+    pdfsubject           = {Recipes},
+    pdfkeywords          = {example, recipes, cookbook, xcookybooky},
+    pdfstartview         = {FitV},
+    pdfview              = {FitH},
+    pdfpagemode          = {UseNone}, % Options; UseNone, UseOutlines
+    bookmarksopen        = {true},
+    pdfpagetransition    = {Glitter},
+    colorlinks           = {true},
+    linkcolor            = {black},
+    urlcolor             = {blue},
+    citecolor            = {black},
+    filecolor            = {black},
+}
+
+\hbadness=10000	% Ignore underfull boxes
+
+\begin{document}
+
+\title{Examples for using \textbf{xcookybooky}}
+\author{Julio Eneriz\\ \href{mailto:recetas@jeneriz.com}{recetas@jeneriz.com}}
+\maketitle
+
+\noindent I saw this package (https://github.com/SvenHarder/xcookybooky/) browsing the web and got curious. I'm just trying to write a couple of recipes in Spanish to see if I like it and to pass them to some friends that are interested. I'm not even bothering to remove all the text since I can commit only 1h tonight to this project. Let's see if I can come back.
+
+\noindent I was spending too much time thinking about how to organize it. Should I put all the recipes that have replacements for allergies in a specific section? I was also struggling with pizza and bread, since I can't talk about one without talking about the other... But it's better to have something to iterate even if I got everything wrong, at least I'll have something to fix.
+
+http://davetrott.co.uk/2009/11/shake-things-up/
+
+\noindent I don't know why (my latex is quite rusty) I can't use Spanish tildes or the letter that goes after n in our alphabet, something to fix.
+
+    \noindent The examples in this document require at least version~1.4 of the \texttt{xcookybooky}\footnote{\url{http://www.ctan.org/pkg/xcookybooky}} package. For more examples and test recipes especially for using hook functions take a look at the source files located at \url{https://code.google.com/p/xcookybooky/}. If you are interested in modifying the layout of \texttt{xcookybooky} you will find examples in the documentation as well as in the configuration file \textbf{xcookybooky.cfg}.
+
+\tableofcontents
+
+\vspace{5em}
+
+\chapter{Legumbres}
+\section{¿Quién da más por menos?}
+Baratas, ricas, nutritivas y agradecidas en la cocina.
+
+\section{Consideracions previas}
+La mayoria hay que hidratarlas o compralas ya cocidas
+
+\section{Recetas}
+
+\begin{recipe}
+[% 
+    preparationtime = {\unit[10]{minutos}},
+    portion = {\portion{3-4}},
+    source = {Nunca lo he visto por escrito}
+]
+{Hummus sin tahina}
+    
+    \introduction{%
+El hummus no es hummus sin tahina, son garbanzos alinhados. Al menos es lo que creia hasta que un día en MasterChef alguien se olvido de coger tahina y tuvo que improvisar... y uso lentejas en su lugar. Dudo mucho que fuese un accidente si no un artificio para presentar una idea sorprendente. El caso es que me quede con el detalle y, cuando anhos mas tarde tuve que dejar de hacer el hummus normal por una de las alergias de mi hija, me vino bien recordarlo.
+    }
+    
+    \ingredients{%
+	\unit[570]{g} & Un bote de garbanzos, con el liquido (no se tira! ver seccion de aquafaba).  \\
+	\unit[125]{g} & Lentejas cocidas  \\
+	\unit[30]{g} & Aceite de olivda virgen extra \\
+	\unit[30]{g} & Zumo de limon
+	1 diente de ajo
+	2 Pizcas de cominos
+	1 Pizca de sal
+    }
+    
+    \preparation{%
+        \step Triturar todo en la batidora o thermomix. Yo la pongo 10 segundos al 4 y luego 1 minuto al 7.
+        \step Probar, ver la textura y ajustar. Si esta muy espeso, se puede poner mas agua o limon. Rectificar la sal y cominos. Poner mas lentejas si sabe mucho a garbanzo.
+        \step Servir en una fuente y adornar con un poco de aceite por encima. Se puede adornar con sal en escamas, comino, pimenton...
+    }
+    
+    \suggestion[Ajos y limon]
+    {%
+	Algunas recetas no ponen ajo y otras ponen 6 dientes de ajo... Demasiado rango para que dependa del gusto de cada uno. Kenji explico un dia que el sabor de ajo depende mucho de la acidez del entorno. Con un ajo esta bien, con 6 solo se puede tomar si segun se pelan, se dejan unos minutos en el limon. Daran mucho sabor pero no repetiran y no estara demasiado fuerte.
+    }
+    
+    \suggestion{%
+	Las lentejas suelo cocerlas, los garbanzos van de bote. Las lentejas tambien pueden ir de bote, pero dado que se hacen en un momento, no me supone tanto problema como tener que hidratar los garbanzos. Los garbanzos de bote o lata estan buenos y no hay mucha diferencia, aunque si es cierto que esta algo mejor con garbanzos cocidos de la forma tradicional.
+    }
+    
+    \suggestion{%
+	Hay gente que pela los garbanzos para que quede mas fino. Una vez que coci yo los garbanzos intente apartar algunas pieles, lo cual es mas facil si se sobrecuecen. Estaba algo mas suave, pero no se si por cocer de mas o por pelar y no creo que me moleste en averiguarlo nunca.
+    }
+    
+    \hint{%
+        Se puede comer con pan o con verduras, a mi me gusta mucho usar calabacin a la plancha. Hay quien lo usa para bocadillos.
+    }
+    
+\end{recipe}
+
+\begin{recipe}
+[% 
+    preparationtime = {\unit[10]{minutos}},
+    portion = {\portion{3-4}},
+    source = {Nunca lo he visto por escrito}
+]
+{Hummus bi tahina}
+    
+    \introduction{%
+	Ojo, la tahina es pasta de sesamo, cuidado con las alergias
+    }
+    
+    \ingredients{%
+	\unit[570]{g} & Un bote de garbanzos, con el liquido (no se tira! ver seccion de aquafaba).  \\
+	\unit[125]{g} & Lentejas cocidas  \\
+	\unit[30]{g} & Aceite de olivda virgen extra \\
+	\unit[30]{g} & Zumo de limon
+	1 diente de ajo
+	2 Pizcas de cominos
+    }
+    
+    \preparation{%
+        \step Ver la receta sin tahina y hacer lo mismo
+    }
+        
+\end{recipe}
+
+\chapter{Pizzas y panes}
+\section{Introduccion}
+\section{¿Como hornear pan en casa?}
+\section{¿Como hornear pizza en casa?}
+\section{Recetas}
+\begin{recipe}
+[% 
+    preparationtime = {\unit[1]{h}},
+    bakingtime={\unit[1]{h}},
+    bakingtemperature={\protect\bakingtemperature{
+        fanoven=\unit[230]{\textcelcius},
+        topbottomheat=\unit[195]{C},
+        topheat=\unit[195]{C},
+        gasstove=Level 2}},
+    portion = {\portion{5-6}},
+    calory={\unit[3]{kJ}},
+    source = {Somebody you used know}
+]
+{Pan basico}
+    
+    %\graph
+    %{% pictures
+    %    small=pic/glass,     % small picture
+    %    big=pic/ingredients  % big picture
+    %}
+    
+    \introduction{%
+        \blindtext
+    }
+    
+    \ingredients{%
+        2 bar & Dark Chocolate (above \unit[70]{\%})\\
+        3 & Eggs\\
+        \unit[200]{ml} & Cream\\
+        40 g & Sugar\\
+        50 g & Butter
+    }
+    
+    \preparation{%
+        \step \blindtext
+        \step \blindtext
+        \step \blindtext
+    }
+    
+    \suggestion[Headline]
+    {%
+        \blindtext
+    }
+    
+    \suggestion{%
+        \blindtext
+    }
+    
+    \hint{%
+        Enjoy typesetting recipes with {\textbf{\Large\LaTeX}} and {\textbf{\Large xcookybooky!}}
+    }
+    
+\end{recipe}
+% Complete recipe example
+\begin{recipe}
+[% 
+    preparationtime = {\unit[1]{h}},
+    bakingtime={\unit[1]{h}},
+    bakingtemperature={\protect\bakingtemperature{
+        fanoven=\unit[230]{\textcelcius},
+        topbottomheat=\unit[195]{C},
+        topheat=\unit[195]{C},
+        gasstove=Level 2}},
+    portion = {\portion{5-6}},
+    calory={\unit[3]{kJ}},
+    source = {Somebody you used know}
+]
+{Pan integral basico}
+    
+    %\graph
+    %{% pictures
+    %    small=pic/glass,     % small picture
+    %    big=pic/ingredients  % big picture
+    %}
+    
+    \introduction{%
+        \blindtext
+    }
+    
+    \ingredients{%
+        2 bar & Dark Chocolate (above \unit[70]{\%})\\
+        3 & Eggs\\
+        \unit[200]{ml} & Cream\\
+        40 g & Sugar\\
+        50 g & Butter
+    }
+    
+    \preparation{%
+        \step \blindtext
+        \step \blindtext
+        \step \blindtext
+    }
+    
+    \suggestion[Headline]
+    {%
+        \blindtext
+    }
+    
+    \suggestion{%
+        \blindtext
+    }
+    
+    \hint{%
+        Enjoy typesetting recipes with {\textbf{\Large\LaTeX}} and {\textbf{\Large xcookybooky!}}
+    }
+    
+\end{recipe}
+% Complete recipe example
+\begin{recipe}
+[% 
+    preparationtime = {\unit[1]{h}},
+    bakingtime={\unit[1]{h}},
+    bakingtemperature={\protect\bakingtemperature{
+        fanoven=\unit[230]{\textcelcius},
+        topbottomheat=\unit[195]{C},
+        topheat=\unit[195]{C},
+        gasstove=Level 2}},
+    portion = {\portion{5-6}},
+    calory={\unit[3]{kJ}},
+    source = {Somebody you used know}
+]
+{Pizza}
+    
+    %\graph
+    %{% pictures
+    %    small=pic/glass,     % small picture
+    %    big=pic/ingredients  % big picture
+    %}
+    
+    \introduction{%
+        \blindtext
+    }
+    
+    \ingredients{%
+        2 bar & Dark Chocolate (above \unit[70]{\%})\\
+        3 & Eggs\\
+        \unit[200]{ml} & Cream\\
+        40 g & Sugar\\
+        50 g & Butter
+    }
+    
+    \preparation{%
+        \step \blindtext
+        \step \blindtext
+        \step \blindtext
+    }
+    
+    \suggestion[Headline]
+    {%
+        \blindtext
+    }
+    
+    \suggestion{%
+        \blindtext
+    }
+    
+    \hint{%
+        Enjoy typesetting recipes with {\textbf{\Large\LaTeX}} and {\textbf{\Large xcookybooky!}}
+    }
+    
+\end{recipe}
+\end{document} ​
