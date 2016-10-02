@@ -66,13 +66,14 @@ twoside,
 
 http://davetrott.co.uk/2009/11/shake-things-up/
 
-\noindent I don't know why (my latex is quite rusty) I can't use Spanish tildes or the letter that goes after n in our alphabet, something to fix.
-
     \noindent The examples in this document require at least version~1.4 of the \texttt{xcookybooky}\footnote{\url{http://www.ctan.org/pkg/xcookybooky}} package. For more examples and test recipes especially for using hook functions take a look at the source files located at \url{https://code.google.com/p/xcookybooky/}. If you are interested in modifying the layout of \texttt{xcookybooky} you will find examples in the documentation as well as in the configuration file \textbf{xcookybooky.cfg}.
 
 \tableofcontents
 
 \vspace{5em}
+\chapter{Recetas o comidas}
+\section{Importa?}
+Una tabla de quesos necesita una receta? 
 
 \chapter{Legumbres}
 \section{¿Quién da más por menos?}
@@ -160,6 +161,11 @@ El hummus no es hummus sin tahina, son garbanzos aliñados. Al menos es lo que c
 \chapter{Pizzas y panes}
 \section{Introducción}
 \section{¿Cómo hornear pan en casa?}
+\subsection{Los 12 pasos del pan}
+\subsection{El panadero práctico}
+\subsection{Autólisis}
+\subsection{Pliegues}
+\subsection{El horno dentro del horno}
 \section{¿Cómo hornear pizza en casa?}
 \section{Recetas}
 \begin{recipe}
@@ -218,10 +224,10 @@ El hummus no es hummus sin tahina, son garbanzos aliñados. Al menos es lo que c
 % Complete recipe example
 \begin{recipe}
 [% 
-    preparationtime = {\unit[1]{h}},
-    bakingtime={\unit[1]{h}},
+    preparationtime = {\unit[15]{min}},
+    bakingtime={\unit[45]{min}},
     bakingtemperature={\protect\bakingtemperature{
-        fanoven=\unit[230]{\textcelcius},
+        fanoven=\unit[245]{\textcelcius},
         topbottomheat=\unit[195]{C},
         topheat=\unit[195]{C},
         gasstove=Level 2}},
@@ -238,34 +244,42 @@ El hummus no es hummus sin tahina, son garbanzos aliñados. Al menos es lo que c
     %}
     
     \introduction{%
-        \blindtext
+	Esta es la receta de pan que suelo hacer, sin detallar mucho los tiempos porque admite mucho margen en los tiempos. Las cantidades dan para dos hogazas hermosas y la mitad de la primera suele caer para la cena.
     }
     
     \ingredients{%
-        2 bar & Dark Chocolate (above \unit[70]{\%})\\
-        3 & Eggs\\
-        \unit[200]{ml} & Cream\\
-        40 g & Sugar\\
-        50 g & Butter
+        \unit[700]{g} Harina integral (T150 Roca) \\
+        \unit[300]{g} Harina de fuerza (Mercadona)  \\
+        \unit[790]{ml} Agua \\
+        \unit[16]{g} Sal \\
+        \unit[1]{g} Levadura 
     }
     
     \preparation{%
-        \step \blindtext
-        \step \blindtext
-        \step \blindtext
+        \step Mezclar el agua y las harinas sin necesidad de amasar apenas
+        \step Tras 15-30 minutos, incorporar la sal y la levadura y amasar un poco
+	\step Si se puede, darle unos dobleces a la masa, especialmente en la primera hora
+        \step Dejar reposar toda la noche. Por la mañana, dividir en dos, dar forma y guardar en la nevera
+	\step Encender el horno unas dos horas antes de necesitar el pan, a \unit[250]{C} con un recipiente pesado dentro.
+	\step Cuando el horno esté caliente, en otros 30-40 minutos, poner el pan y tapar
+	\step Hornear 20-30 minutos tapado y otros 20-30 minutos destapado.
+	\step Dejar enfriar media hora
     }
     
-    \suggestion[Headline]
+    \suggestion[Puntos clave]
     {%
-        \blindtext
+        Esta masa es bastante elástica y agradece mucho los pliegues y la fermentación lenta. La he hecho con \unit[700]{ml} de agua y \unit[25]{g} de levadura fermentando una hora y queda parecida.
+	La harina integral se puede tamizar para filtrar las partes más grandes del salvado. Se pueden añadir a la corteza para no perder su valor integral.
+	Más harina integral hace que la masa le cueste mucho subir.
+	Si no pierde demasiado gas queda con una miga muy tierna.
     }
     
     \suggestion{%
-        \blindtext
+        Este pan tiene muy buen sabor y sirve para todo, desde las tostadas del desayuno, con mermelada o con tomate, aceite, pimienta y salo para acompañar un guiso.
     }
     
     \hint{%
-        Enjoy typesetting recipes with {\textbf{\Large\LaTeX}} and {\textbf{\Large xcookybooky!}}
+        Alergias: gluten
     }
     
 \end{recipe}
@@ -323,4 +337,7 @@ El hummus no es hummus sin tahina, son garbanzos aliñados. Al menos es lo que c
     }
     
 \end{recipe}
-\end{document} ​
+
+\section{Bibliografía}
+Aquí quiero poner referencias bibliográficas pero también poner comentarios sobre cada libro...
+\end{document} 
